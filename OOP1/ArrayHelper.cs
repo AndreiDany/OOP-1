@@ -16,8 +16,8 @@ namespace OOP1
             F[1] = 1;
             if (n == 1) return F;
             int i = 1;
-            
-            while (i < n-1)
+
+            while (i < n - 1)
             {
                 i++;
                 F[i] = F[i - 1] + F[i - 2];
@@ -29,12 +29,17 @@ namespace OOP1
         public static int Frecventa(int[] vector, int element)
         {
             int frecventa = 0;
-            for (int i = 0; i < vector.Length; i++)
+            if (vector != null)
             {
-                if (vector[i] == element) frecventa++;
+                for (int i = 0; i < vector.Length; i++)
+                {
+                    if (vector[i] == element) frecventa++;
 
+                }
+                
             }
             return frecventa;
+
         }
 
         public static bool Identitate(int[,] matrix)
